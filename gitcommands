@@ -1,0 +1,75 @@
+# git commands!!
+
+# create a new repository/project
+git init
+
+# check status
+git status
+
+#add to staging area
+git add
+
+#check changes from staging aread and original
+git diff filename
+
+#after done with editing in the staging area then commit
+git commit -m "message here"
+
+# get a log of past behaviour
+git log
+
+# to get past info 
+# below goes back to the latest commit!!
+git checkout HEAD filename
+
+# undo and take out a file that is not intended to be included in a commit
+git reset HEAD filename
+
+#reset based on a specific SHA 7 digit commit
+git reset SHA
+
+
+# git branching
+# shows which branch you are currently on
+git branch
+# creates a new branch 
+git branch new_branch
+# switch to a different branch
+git checkout branch_name
+
+
+# When you are ready to merge your file back up with the master you do a git merge
+git merge branch_name
+
+# watch out for merge conflicts
+
+# when you no longer need the fork.  You should delete the branch
+git branch -d branch_name
+
+
+# collaboration with others!! the good stuff!!
+git clone remote_location clone_name
+
+# see a list of Git project's remotes with this command
+git remote -v
+
+# to see if any changes have been made
+git fetch
+
+# make sure you are in the correct working directory
+cd ny-quizzes
+# to merge local master branch to remote master branch
+git merge origin/master
+
+# typical workflow of git collaborations 
+# 1. Fetch and merge changes from the remote
+# 2. Create a branch to work on a new project feature
+# 3. Develop the feature on your branch and commit your work
+# 4. Fetch and merge from the remote again (in case new commits were made while you were working)
+# 5. Push your branch up to the remote for review
+
+# we went throught the workflow on out local computer. Now it is time to share out work!!
+git push origin your_branch_name
+
+# last thing is to merge the branch to the master!! 
+
